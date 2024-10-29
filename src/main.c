@@ -6,6 +6,10 @@
 #include "sdlext/window.h"
 #include "sdlext/opengl.h"
 
+// TESTING
+#include "client/config.h"
+// END TESTING
+
 int main(void) {
 
     /* SDL setup. */
@@ -28,6 +32,19 @@ int main(void) {
         &sdlext_window,
         &sdlext_opengl
     );
+
+    /* User config setup. */
+
+    // TESTING START
+    client_config_t user_config = {0};
+    client_config_overwrite_user();
+    client_config_load(&user_config);
+    client_config_make_real(
+        &user_config,
+        &sdlext_window
+    );
+
+    // TESTING END
 
     /* Event loop. */
     while (!quit) {

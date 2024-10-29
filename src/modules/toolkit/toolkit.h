@@ -10,6 +10,13 @@
 #include <assert.h>
 #include <ctype.h>
 #include <inttypes.h>
+#include <limits.h>
+#include <unistd.h>
+
+#ifdef BUILDFLAG_WINDOWS
+#include <windows.h>
+#endif
+
 
 #include "toolkit/time.h"
 
@@ -70,8 +77,6 @@
 #define DEBUG(fmt, args...) do { char buffer[20]; timestamp_t ts = timestamp_get(false); timestamp_strftime(buffer, 20, "%Y-%m-%dT%H:%M:%S", ts); fprintf(stderr, "[DBG][%s][%s:%d:%s]: " fmt, buffer, basename(__FILE__), __LINE__, __FUNCTION__, ##args); } while(0)
 /* Print `msg: string` to stderr as error. Does not exit, unlike `RUNTIME_ASSERT()`. */
 #define ERROR(fmt, args...) do { char buffer[20]; timestamp_t ts = timestamp_get(false); timestamp_strftime(buffer, 20, "%Y-%m-%dT%H:%M:%S", ts); fprintf(stderr, "[ERR][%s][%s:%d:%s]: " fmt, buffer, basename(__FILE__), __LINE__, __FUNCTION__, ##args); } while(0)
-/* Print `msg: string` to stderr as fatal. Does not exit, unlike `RUNTIME_ASSERT()`. */
-#define FATAL(fmt, args...) do { char buffer[20]; timestamp_t ts = timestamp_get(false); timestamp_strftime(buffer, 20, "%Y-%m-%dT%H:%M:%S", ts); fprintf(stderr, "[FTL][%s][%s:%d:%s]: " fmt, buffer, basename(__FILE__), __LINE__, __FUNCTION__, ##args); } while(0)
 
 /* Assert that `cond: bool_expression` is true at compile time. */
 #define COMPILE_ASSERT(cond) static_assert(cond)
