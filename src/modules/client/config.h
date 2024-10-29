@@ -3,10 +3,16 @@
 
 #include "toolkit/toolkit.h"
 #include "toolkit/exepath.h"
-
 #include "sdlext/window.h"
-
 #include "external/cwalk.h"
+
+/*
+    === INFO ===
+    1. User configuration manager.
+    2. If the user can change it in a settings menu, it belongs here.
+    3. `client_config_load` then `client_config_make_real`.
+
+*/
 
 typedef struct client_config_t {
     struct {

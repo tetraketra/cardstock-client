@@ -17,7 +17,6 @@
 #include <windows.h>
 #endif
 
-
 #include "toolkit/time.h"
 
 /*

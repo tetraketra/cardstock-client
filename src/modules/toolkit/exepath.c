@@ -10,7 +10,6 @@
 void exepath_get(char *buffer, size_t buffer_len) {
 #ifdef BUIDFLAG_WINDOWS
     GetModuleFileName(NULL, buffer, buffer_len);
-    // Find the last backslash and replace with a null terminator to get the directory
     char *last_backslash = strrchr(buffer, '\\');
     if (last_backslash) {
         *last_backslash = '\0';
@@ -19,7 +18,6 @@ void exepath_get(char *buffer, size_t buffer_len) {
     ssize_t len = readlink("/proc/self/exe", buffer, buffer_len - 1);
     if (len != -1) {
         buffer[len] = '\0';
-        // Find the last slash and replace with a null terminator to get the directory
         char *last_slash = strrchr(buffer, '/');
         if (last_slash) {
             *last_slash = '\0';

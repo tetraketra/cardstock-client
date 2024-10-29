@@ -5,10 +5,7 @@
 #include "sdlext/mouse.h"
 #include "sdlext/window.h"
 #include "sdlext/opengl.h"
-
-// TESTING
 #include "client/config.h"
-// END TESTING
 
 int main(void) {
 
@@ -34,17 +31,12 @@ int main(void) {
     );
 
     /* User config setup. */
-
-    // TESTING START
     client_config_t user_config = {0};
-    client_config_overwrite_user();
     client_config_load(&user_config);
     client_config_make_real(
         &user_config,
         &sdlext_window
     );
-
-    // TESTING END
 
     /* Event loop. */
     while (!quit) {
