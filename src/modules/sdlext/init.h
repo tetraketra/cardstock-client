@@ -12,6 +12,8 @@
 #define WINDOW_INIT_WIDTH 800
 #define WINDOW_INIT_HEIGHT 600
 
+typedef SDL_bool SDL_Bool;
+
 void sdlext_init(
     SDL_Window** window, 
     SDL_GLContext* context, 

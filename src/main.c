@@ -13,7 +13,7 @@ int main(void) {
     SDL_Window* window;
     SDL_GLContext context;
     SDL_Event event;
-    SDL_bool quit;
+    SDL_Bool quit;
     SDLEXT_Keys sdlext_keys;
     SDLEXT_Mouse sdlext_mouse;
     SDLEXT_Window sdlext_window;
