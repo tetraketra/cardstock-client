@@ -9,7 +9,7 @@
 
 int main(void) {
 
-    /* SDL setup. */
+    /* Setup. */
     SDL_Window* window;
     SDL_GLContext context;
     SDL_Event event;
@@ -31,10 +31,10 @@ int main(void) {
     );
 
     /* User config setup. */
-    client_config_t user_config = {0};
-    client_config_load(&user_config);
-    client_config_make_real(
-        &user_config,
+    CACL_Config cacl_config;
+
+    cacl_config_init(
+        &cacl_config, 
         &sdlext_window
     );
 

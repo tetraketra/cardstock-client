@@ -10,22 +10,24 @@
     === INFO ===
     1. User configuration manager.
     2. If the user can change it in a settings menu, it belongs here.
-    3. `client_config_load` then `client_config_make_real`.
+    3. `cacl_config_load` then `cacl_config_make_real`.
 
 */
 
-typedef struct client_config_t {
+typedef struct CACL_Config {
     struct {
         char title[256];
     } window;
-} client_config_t; 
+} CACL_Config; 
 
-extern bool client_config_save(client_config_t* save);
-extern bool client_config_load(client_config_t* load);
-extern bool client_config_overwrite_default(void);
-extern bool client_config_overwrite_user(void);
+extern bool cacl_config_save(CACL_Config* save);
+extern bool cacl_config_load(CACL_Config* load);
+extern bool cacl_config_overwrite_default(void);
+extern bool cacl_config_overwrite_user(void);
 
-extern void client_config_make_real(client_config_t* config, SDLEXT_Window* sdlext_window);
-extern void client_config_set_window_title(client_config_t* config, SDLEXT_Window* sdlext_window, const char* title, size_t title_len);
+extern void cacl_config_init(CACL_Config* config, SDLEXT_Window* sdlext_window);
+
+extern void cacl_config_make_real(CACL_Config* config, SDLEXT_Window* sdlext_window);
+extern void cacl_config_set_window_title(CACL_Config* config, SDLEXT_Window* sdlext_window, const char* title, size_t title_len);
 
 #endif
