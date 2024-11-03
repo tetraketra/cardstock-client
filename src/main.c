@@ -9,7 +9,7 @@
 
 int main(void) {
 
-    /* Setup. */
+    /* SDL setup. */
     SDL_Window* window;
     SDL_GLContext context;
     SDL_Event event;
@@ -30,8 +30,8 @@ int main(void) {
         &sdlext_opengl
     );
 
-    /* User config setup. */
-    CACL_Config cacl_config;
+    /* Client setup. */
+    CACL_Config cacl_config = {.window.title = "Cardstock Client"};
 
     cacl_config_init(
         &cacl_config, 

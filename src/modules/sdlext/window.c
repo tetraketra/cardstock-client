@@ -18,4 +18,10 @@ inline void sdlext_window_update(SDL_Event* event, SDLEXT_Window* window) {
             window->height = event->window.data2;
             break;
     }
+    
+    /*
+        TODO:
+        Eventually you'll want to update your OpenGL stuff here too!
+        > https://stackoverflow.com/questions/49344767/resizing-window-using-sdl-and-opengl
+    */
 }
