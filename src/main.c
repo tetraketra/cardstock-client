@@ -2,6 +2,7 @@
 #include "toolkit/time.h"
 #include "sdlext/init.h"
 #include "sdlext/keys.h"
+#include "sdlext/keychord.h"
 #include "sdlext/mouse.h"
 #include "sdlext/window.h"
 #include "sdlext/opengl.h"
