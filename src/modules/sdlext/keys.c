@@ -1,7 +1,7 @@
 #include "keys.h"
 
 /*
-    Updates the `sdlext::keys` tracker struct given the current `SDL_Event`.
+    Updates the `SDLEXT_Keys` tracker struct given the current `SDL_Event`.
 
     @param event Address of the `SDL_Event` struct to update with.
     @param keys Address of the `SDLEXT_Keys` struct to update. 

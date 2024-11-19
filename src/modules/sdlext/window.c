@@ -1,10 +1,10 @@
 #include "window.h"
 
 /*
-    Updates the `sdlext::window` tracker struct given the current `SDL_Event`.
+    Updates the `SDLEXT_Window` tracker struct given the current `SDL_Event`.
 
     @param event Address of the `SDL_Event` struct to update with.
-    @param keys Address of the `SDLEXT_Window` struct to update. 
+    @param window Address of the `SDLEXT_Window` struct to update. 
 
     @note Self-contained switch-case on `event->type`. 
     @note Intended for use inside your `SDL_PollEvent`/`SDL_WaitEvent` loop.
