@@ -2,6 +2,8 @@
 
 /*
     Updates a user-defined `SDLEXT_KeyChord` given its referenced keys.
+    This can be used for *literally any keybind*. It doesn't reat
+    modifier keys as anything special. Those'd just be part of the chord.
 
     @param chord Address of the `SDLEXT_KeyChord` to update.
 
