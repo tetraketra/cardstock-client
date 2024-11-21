@@ -34,7 +34,7 @@ int main(void) {
     /* Client setup. */
     CACL_Config cacl_config = {.window.title = "Cardstock Client"};
 
-    cacl_config_init(
+    cacl_config_load_and_init(
         &cacl_config, 
         &sdlext_window
     );

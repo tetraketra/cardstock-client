@@ -168,7 +168,7 @@ bool cacl_config_load(CACL_Config* load) {
 
     @note For documentation, see `cacl_config_load` and `cacl_config_make_real`.
 */
-void cacl_config_init(CACL_Config* config, SDLEXT_Window* sdlext_window) {
+void cacl_config_load_and_init(CACL_Config* config, SDLEXT_Window* sdlext_window) {
     cacl_config_load(config);
     cacl_config_make_real(
         config,

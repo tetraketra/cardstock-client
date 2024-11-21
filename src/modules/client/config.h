@@ -20,12 +20,12 @@ typedef struct CACL_Config {
     } window;
 } CACL_Config; 
 
-extern bool cacl_config_save(CACL_Config* save);
-extern bool cacl_config_load(CACL_Config* load);
 extern bool cacl_config_overwrite_default(void);
 extern bool cacl_config_overwrite_user(void);
 
-extern void cacl_config_init(CACL_Config* config, SDLEXT_Window* sdlext_window);
+extern bool cacl_config_save(CACL_Config* save);
+extern bool cacl_config_load(CACL_Config* load);
+extern void cacl_config_load_and_init(CACL_Config* config, SDLEXT_Window* sdlext_window);
 
 extern void cacl_config_make_real(CACL_Config* config, SDLEXT_Window* sdlext_window);
 extern void cacl_config_set_window_title(CACL_Config* config, SDLEXT_Window* sdlext_window, const char* title, size_t title_len);
