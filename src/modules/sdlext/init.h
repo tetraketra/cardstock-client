@@ -3,6 +3,8 @@
 
 #include <glad/glad.h>
 
+#include "stdbool.h"
+
 #include "sdlext.h"
 #include "keys.h"
 #include "mouse.h"
@@ -12,17 +14,15 @@
 #define WINDOW_INIT_WIDTH 800
 #define WINDOW_INIT_HEIGHT 600
 
-typedef SDL_bool SDL_Bool;
-
 void sdlext_init(
     SDL_Window** window, 
     SDL_GLContext* context, 
     SDL_Event* event, 
-    SDL_bool* quit, 
     SDLEXT_Keys* sdlext_keys, 
     SDLEXT_Mouse* sdlext_mouse,
     SDLEXT_Window* sdlext_window,
-    SDLEXT_OpenGL* sdlext_opengl
+    SDLEXT_OpenGL* sdlext_opengl,
+    bool* quit
 );
 
 void sdlext_exit(

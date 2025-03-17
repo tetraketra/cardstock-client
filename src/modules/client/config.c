@@ -209,9 +209,9 @@ void cacl_config_set_window_title(CACL_Config* config, SDLEXT_Window* sdlext_win
     }
     
     if (sdlext_window != NULL) {
-        SDL_bool set = SDL_SetWindowTitle(sdlext_window->window, config->window.title);
+        bool set = SDL_SetWindowTitle(sdlext_window->window, config->window.title);
 
-        if(set == SDL_FALSE) {
+        if(set == false) {
             ERROR("Could not set SDL_window title: %s\n", SDL_GetError());
         }
     }

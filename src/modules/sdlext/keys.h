@@ -254,7 +254,7 @@
     X(SDL_SCANCODE_CALL) \
     X(SDL_SCANCODE_ENDCALL) \
     X(SDL_SCANCODE_RESERVED) \
-    X(SDL_NUM_SCANCODES)
+    X(SDL_SCANCODE_COUNT)
 
 typedef struct SDLEXT_Key {
     timestamp_t last_down;

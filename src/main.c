@@ -14,21 +14,21 @@ int main(void) {
     SDL_Window* window;
     SDL_GLContext context;
     SDL_Event event;
-    SDL_Bool quit;
     SDLEXT_Keys sdlext_keys;
     SDLEXT_Mouse sdlext_mouse;
     SDLEXT_Window sdlext_window;
     SDLEXT_OpenGL sdlext_opengl;
+    bool quit;
 
     sdlext_init(
         &window,
         &context,
         &event,
-        &quit,
         &sdlext_keys,
         &sdlext_mouse,
         &sdlext_window,
-        &sdlext_opengl
+        &sdlext_opengl,
+        &quit
     );
 
     /* Client setup. */

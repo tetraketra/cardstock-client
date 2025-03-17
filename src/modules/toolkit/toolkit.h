@@ -65,11 +65,6 @@
 /* Add `add: numeric` to `value: numeric`, clamped to `max`: numeric. */
 #define ADD_CLAMP(x, add, max) MIN(x + add, max)
 
-
-    // char buffer[256];
-    // timestamp_strftime(buffer, 256, "%Y-%m-%dT%H:%M:%S", timestamp);
-    // DEBUG("`timestamp_strftime` test returns \"%s\" for the previous `timestamp_get` call.\n", buffer);
-
 /* Print `msg: string` to stderr as info. */
 #define INFO(fmt, args...)  do { char buffer[20]; timestamp_t ts = timestamp_get(false); timestamp_strftime(buffer, 20, "%Y-%m-%dT%H:%M:%S", ts); fprintf(stderr, "[INF][%s][%s:%d:%s]: " fmt, buffer, basename(__FILE__), __LINE__, __FUNCTION__, ##args); } while(0)
 /* Print `msg: string` to stderr as debug. */

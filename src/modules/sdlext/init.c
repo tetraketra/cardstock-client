@@ -11,16 +11,16 @@ void sdlext_init(
     SDL_Window** window, 
     SDL_GLContext* context, 
     SDL_Event* event,
-    SDL_bool* quit,
     SDLEXT_Keys* sdlext_keys,
     SDLEXT_Mouse* sdlext_mouse,
     SDLEXT_Window* sdlext_window,
-    SDLEXT_OpenGL* sdlext_opengl
+    SDLEXT_OpenGL* sdlext_opengl,
+    bool* quit
 ) {
 
     /* Setup. */
     atexit(SDL_Quit);
-    if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_EVENTS) == SDL_FALSE) {
+    if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_EVENTS) == false) {
         ERROR("Could not initialize SDL: %s\n", SDL_GetError());
         exit(EXIT_FAILURE);
     }
